@@ -1,0 +1,11 @@
+class A{
+	static void main(){
+		(B.met1()).met();
+	}
+	dynamic void met(){}
+}
+class B{
+	static A met1(){
+		return null;
+	}
+}

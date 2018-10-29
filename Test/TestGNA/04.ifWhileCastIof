@@ -1,0 +1,89 @@
+class A{
+	public int entero;
+	public C c;
+	
+	A(int n){
+		entero=n;
+	}
+	static void main(){
+		C cLocal;
+		int i;
+		i=0;
+		while(i<10){
+			if(i%2==0){
+				(System.printS("Iteracion : "));
+				(System.printIln(i));
+			}
+			i=i+1;
+		}
+	       //while e if
+		
+		cLocal= new C();
+		
+		(System.printBln(cLocal instanceof E));
+		if(cLocal instanceof E){
+			E elem;
+			elem=[E]cLocal;
+			(System.printIln(elem.metE()));
+			(System.printIln(([E]cLocal).metE()));
+		}else
+			(System.printIln(125));
+		cLocal= new E();
+		
+		(System.printBln(cLocal instanceof E));
+		if(cLocal instanceof E){
+			E elem;
+			elem=[E]cLocal;
+			(System.printIln(elem.metE()));
+			(System.printIln(([E]cLocal).metE()));
+		}
+	}
+	static int metStatA(){
+		return 5;
+	}
+	dynamic int getEnteroA(){
+		return entero;
+	}
+}
+class C{
+	public int enteroC;
+	
+	C(){
+		//enteroC=1;
+	}
+	static int get2(){
+		return 2;
+	}
+	static C getInstaciaC(){
+		return new C();
+	}
+	dynamic A getInstaciaA(){
+		return new A(22);
+	}
+	dynamic int getEnteroC(){
+		return enteroC;
+	}
+	
+	dynamic int getThisEnteroC(){
+		return this.enteroC;
+	}
+	dynamic int getThisMetEnteroC(){
+		return this.getEnteroC();
+	}
+	dynamic int get23C(){
+		return 23;
+	}
+	dynamic int get23cc(){
+		return get23C();
+	}
+	
+}
+class E extends C{
+	dynamic int get23C(){
+		return 35;
+	}
+	
+	dynamic int metE(){
+		return 1234;
+	}
+}

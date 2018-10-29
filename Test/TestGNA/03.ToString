@@ -1,0 +1,16 @@
+class A{
+	static void main(){
+		A a;
+		a= new A();
+		(System.printSln(a.toString()));
+		a= new B();
+		(System.printSln(a.toString()));
+	}
+	dynamic void met(){}
+}
+class B extends A{
+	public int x;
+	static A met1(){
+		return null;
+	}
+}

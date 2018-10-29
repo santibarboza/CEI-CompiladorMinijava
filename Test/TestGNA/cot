@@ -1,0 +1,7 @@
+class A{
+	static void main(){
+		(System.printIln(0));
+		(System.printIln(2+4));
+	}
+	dynamic void met(){}
+}

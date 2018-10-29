@@ -1,0 +1,29 @@
+class A{
+	static void main(){
+		(System.printIln((C.get2())));										//LlamadaEstatica
+		(System.printIln((C.dup(25))));										//LlamadaEstatica con Param
+	}
+}
+class C{
+	
+	static int get2(){
+		{return 2;}
+	}
+		
+	static int dup(int j){;
+		{
+			int k;
+			k=2;
+		}
+		{
+			int l;
+			{
+				int k;
+				l=2;
+			}
+			int i,k;
+			l=3;
+		}
+		return j*2;
+	}
+}

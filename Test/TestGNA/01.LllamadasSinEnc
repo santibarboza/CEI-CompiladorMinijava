@@ -1,0 +1,46 @@
+class A{
+	static void main(){
+		(System.printIln((C.get2())));										//LlamadaEstatica
+		(System.printIln((C.dup(25))));										//LlamadaEstatica con Param
+		(System.printIln(metStatA()));										//LlamadaDirecta Statica
+		metStatAConParam(125,'C');											//LlamadaDirecta Statica Con Param
+		(System.printIln((C.metodoDirecto())));								//LlamadaDirecta DinamicoCon Param
+		C c;
+		c=new C();
+		(System.printIln(c.metodoThis().met35()));									//this
+		(System.printIln(c.metodoThis35()));										//this			
+	}
+	static int metStatA(){
+		return 5;
+	}
+	static void metStatAConParam(int i, char j){
+		(System.printIln(i));
+		(System.printCln(j));
+	}
+}
+class C{
+	public int enteroC;
+	C(){
+	}
+	static int get2(){
+		return 2;
+	}
+	static C getInstaciaC(){
+		return new C();
+	}	
+	static int dup(int j){
+		return j*2;
+	}
+	static int metodoDirecto(){
+		return get2();
+	}
+	dynamic C metodoThis(){
+		return this;
+	}
+	dynamic int met35(){
+		return 35;
+	}
+	dynamic int metodoThis35(){
+		return this.met35();
+	}
+}

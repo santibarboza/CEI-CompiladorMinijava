@@ -1,0 +1,16 @@
+class A{
+	static void main(){
+		int x;
+		x=12/2;
+		A a;
+		a= new A();
+		([B]a).met();
+	}
+	dynamic void met(){}
+}
+class B extends A{
+	public int x;
+	static A met1(){
+		return null;
+	}
+}

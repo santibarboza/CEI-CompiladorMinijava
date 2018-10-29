@@ -1,0 +1,8 @@
+class A{
+	static void main(){
+		int i;
+		i=5;
+		(System.printIln(15/(5-i)));
+	}
+	dynamic void d(){}
+}

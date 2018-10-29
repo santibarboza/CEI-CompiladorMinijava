@@ -1,0 +1,108 @@
+class A{
+	public int entero;
+	public C c;
+	
+	A(int n){
+		entero=n;
+	}
+	static void main(){
+		
+		C cLocal;
+		cLocal= new C();
+		(System.printIln(15+23));
+		(System.printIln((C.get2())));										//LlamadaEstatica
+		(System.printIln(metStatA()));										//LlamadaDirecta
+		(System.printIln(cLocal.get23C()));									//VarPri.LlamadaEnc 
+		(System.printIln(cLocal.enteroC));									//VarPri.AtribEnc
+		(System.printIln(cLocal.getEnteroC()));								//VarPri.LlamadaEnc (utiliza un VarPri )
+		(System.printIln((C.getInstaciaC()).getInstaciaA().getEnteroA()));	//LlamadaEstatica.LlamadaEnc.LlamadaEnc
+		(System.printIln((C.getInstaciaC()).getInstaciaA().entero));		//LlamadaEstatica.LlamadaEnc.AtribEncadenado
+
+		cLocal.enteroC=15;					//varPri.AtribEnc en LI
+		(System.printIln(cLocal.enteroC));									//VarPri.AtribEnc
+		
+		A a;
+		a=cLocal.getInstaciaA();		//varPriLocal en LI
+		a.entero=12345;					//varPriLocal.AtribEnc en LI
+		(System.printIln(a.entero));
+		
+		(System.printIln((cLocal.getThisEnteroC())));			//this.Atribenc
+		(System.printIln((cLocal.getThisMetEnteroC())));		//this.LlamEnc
+		(System.readInt());
+			(System.printIln((System.readInt())));
+			
+		(System.printIln(cLocal.get23C()));		//metodo en C
+		(System.printIln(cLocal.get23cc()));		//metodo en C
+		cLocal=new E();	
+		(System.printIln(cLocal.get23C()));		//metodo redefinido en E
+		
+		
+		int i;
+		i=0;
+		while(i<10){
+			if(i%2==0){
+				(System.printS("Iteracion : "));
+				(System.printIln(i));
+			}
+			i=i+1;
+		}
+	       //while e if
+		(System.printBln(cLocal instanceof E));
+		if(cLocal instanceof E){
+			E elem;
+			elem=[E]cLocal;
+			(System.printIln(elem.metE()));
+			(System.printIln(([E]cLocal).metE()));
+		}
+		(System.printIln(2/4));
+			
+	}
+	static int metStatA(){
+		return 5;
+	}
+	dynamic int getEnteroA(){
+		return entero;
+	}
+}
+class C{
+	public int enteroC;
+	
+	C(){
+		//enteroC=1;
+	}
+	static int get2(){
+		return 2;
+	}
+	static C getInstaciaC(){
+		return new C();
+	}
+	dynamic A getInstaciaA(){
+		return new A(22);
+	}
+	dynamic int getEnteroC(){
+		return enteroC;
+	}
+	
+	dynamic int getThisEnteroC(){
+		return this.enteroC;
+	}
+	dynamic int getThisMetEnteroC(){
+		return this.getEnteroC();
+	}
+	dynamic int get23C(){
+		return 23;
+	}
+	dynamic int get23cc(){
+		return get23C();
+	}
+	
+}
+class E extends C{
+	dynamic int get23C(){
+		return 35;
+	}
+	
+	dynamic int metE(){
+		return 1234;
+	}
+}

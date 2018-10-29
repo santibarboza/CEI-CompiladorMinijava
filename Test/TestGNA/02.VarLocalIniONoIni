@@ -1,0 +1,38 @@
+class A{
+	static void main(){
+		int i;
+		char c;
+		C cc;
+		cc=new C();
+		
+		(System.printIln(i));
+		(System.printCln(c));
+		metStatAConParam(125,'C');											
+		metStatAConParam(i,c);
+		
+		i=150;
+		c='S';											
+		metStatAConParam(i,c);											
+		
+		(System.printIln((cc.enteroC)));
+		cc.setEnteroC(45);
+		(System.printIln((cc.enteroC)));
+		
+			
+	}
+	static void metStatAConParam(int i, char j){
+		(System.printIln(i));
+		(System.printCln(j));
+	}
+}
+class C{
+	public int enteroC;
+	C(){
+	}
+	dynamic int getEnteroC(){
+		return enteroC;
+	}
+	dynamic void setEnteroC(int i){
+		enteroC=i;
+	}
+}

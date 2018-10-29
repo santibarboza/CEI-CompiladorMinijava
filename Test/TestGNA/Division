@@ -1,0 +1,19 @@
+class A{
+	public int x;
+	static void main(){
+		A a;
+		a= new A();
+		(System.printSln(a.toString()));
+		(System.printSln("hola"));
+		a= new B();
+		(System.printSln(a.toString()));
+		(System.printIln(4/2));
+		a.x=0;
+	}
+	dynamic void met(){}
+}
+class B extends A{
+	static A met1(){
+		return null;
+	}
+}

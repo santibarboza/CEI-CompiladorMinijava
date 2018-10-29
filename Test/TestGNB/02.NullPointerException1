@@ -1,0 +1,8 @@
+class A{
+	static void main(){
+		A a;
+		
+		a.met();
+	}
+	dynamic void met(){}
+}
